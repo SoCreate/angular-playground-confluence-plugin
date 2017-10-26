@@ -1,0 +1,112 @@
+{
+    "key": "com.atlassian.confluence.angular-playground-connect",
+    "name": "Angular Playground",
+    "apiVersion": 1,
+    "description": "Provides Angular Playground support for confluence so that you can see your playgrounds in your Confluence pages.",
+    "vendor": {
+        "name": "SoCreate",
+        "url": "https://www.SoCreate.it"
+    },
+    "baseUrl": "https://socreate.github.io/angular-playground-confluence-plugin",
+    "authentication": {
+        "type": "none"
+    },
+    "modules": {
+        "dynamicContentMacros": [
+            {
+                "key": "angularplayground-macro-container",
+                "name": {
+                    "value": "Angular Playground"
+                },
+                "featured": true,
+                "renderModes": {
+                    "default": {
+                        "url": "render-angularplayground.html?angularPlaygroundUrl={angular-playground-url}&width={width}&removeSpacingBottom={remove-spacing-bottom}&viewInPlayground={view-in-playground}&outputType={output.type}"
+                    }
+                },
+                "url": "render-angularplayground.html?angularPlaygroundUrl={angular-playground-url}&width={width}&removeSpacingBottom={remove-spacing-bottom}&viewInPlayground={view-in-playground}&outputType={output.type}",
+                "description": {
+                    "value": "Shows an Angular Playground"
+                },
+                "icon": {
+                    "width": 80,
+                    "height": 80,
+                    "url": "images/angularplayground-icon.png"
+                },
+                "documentation": {
+                    "url": "http://www.angularplayground.it"
+                },
+                "categories": [
+                    "external-content"
+                ],
+                "outputType": "block",
+                "bodyType": "none",
+                "aliases": [
+                    "angularplayground"
+                ],
+                "parameters": [
+                    {
+                        "identifier": "angular-playground-url",
+                        "name": {
+                            "value": "Angular Playground Embed URL"
+                        },
+                        "description": {
+                            "value": "Specifies the Angular Playground that you wish to display"
+                        },
+                        "type": "string",
+                        "required": true,
+                        "multiple": false,
+                        "defaultValue": ""
+                    },
+                    {
+                        "identifier": "width",
+                        "name": {
+                            "value": "Width"
+                        },
+                        "description": {
+                            "value": "Include a unique width (without units) for this iframe."
+                        },
+                        "type": "string",
+                        "required": false,
+                        "multiple": false,
+                        "defaultValue": ""
+                    },
+                    {
+                        "identifier": "remove-spacing-bottom",
+                        "name": {
+                            "value": "Remove Spacing Bottom"
+                        },
+                        "description": {
+                            "value": "By default there is spacing added below the embed. Choosing this option will remove this space."
+                        },
+                        "type": "boolean",
+                        "required": true,
+                        "multiple": false,
+                        "defaultValue": "false"
+                    },
+                    {
+                        "identifier": "view-in-playground",
+                        "name": {
+                            "value": "Include View In Playground Button"
+                        },
+                        "description": {
+                            "value": "Include a button to view the sample in the Playground."
+                        },
+                        "type": "boolean",
+                        "required": true,
+                        "multiple": false,
+                        "defaultValue": "true"
+                    }
+                ],
+                "autoconvert": {
+                    "urlParameter": "angular-playground-url",
+                    "matchers": [
+                        {
+                            "pattern": "https://samplecode.spalding.local/{}"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
