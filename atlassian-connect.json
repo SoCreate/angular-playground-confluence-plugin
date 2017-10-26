@@ -31,7 +31,7 @@
                 "icon": {
                     "width": 80,
                     "height": 80,
-                    "url": "images/angularplayground-icon.png"
+                    "url": "angular-playground-confluence-plugin/images/angularplayground-icon.png"
                 },
                 "documentation": {
                     "url": "http://www.angularplayground.it"
