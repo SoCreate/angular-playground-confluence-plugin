@@ -2,7 +2,9 @@
     let search = location.search.substring(1);
     let queryParams = JSON.parse('{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g, '":"') + '"}');
 
+    let widthOffset = 10;
     let heightOffset = 75;
+    let innerFrameHeightOffset = 5;
 
     let urlParts = decodeURIComponent(queryParams.angularPlaygroundUrl).split('?scenario=');
     let originUrl = urlParts[0];
@@ -45,9 +47,8 @@
         if (origin + '/' !== originUrl)
             return;
 
-        console.log(event.data)
-        iframe.height = event.data.height + 5;
-        AP.resize(event.data.width + 10, event.data.height + heightOffset);
+        iframe.height = event.data.height + innerFrameHeightOffset;
+        AP.resize(event.data.width + widthOffset, event.data.height + heightOffset);
     }
     window.addEventListener('message', receiveMessage, false);
 }())
