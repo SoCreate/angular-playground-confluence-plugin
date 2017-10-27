@@ -10,11 +10,11 @@
     let originUrl = urlParts[0];
     let scenario = urlParts[1].substring(0, urlParts[1].lastIndexOf('/'));
     let desc = urlParts[1].substring(urlParts[1].lastIndexOf('/') + 1);
-    let url = originUrl + '?scenario=' + encodeURIComponent(scenario) + '/' + encodeURIComponent(desc) + '&embed=1';
+    let url = originUrl + '?scenario=' + encodeURIComponent(scenario) + '/' + encodeURIComponent(desc);
 
     let content = document.getElementById('content');
     let iframe = document.createElement('iframe');
-    iframe.setAttribute('src', url);
+    iframe.setAttribute('src', url + '&embed=1');
     iframe.setAttribute('class', 'embed__content');
     content.appendChild(iframe);
 
