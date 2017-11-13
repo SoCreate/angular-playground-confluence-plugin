@@ -102,7 +102,7 @@
                     "urlParameter": "angular-playground-url",
                     "matchers": [
                         {
-                            "pattern": "https://samplecode.spalding.local/{}"
+                            "pattern": "https://operationscenter.angularplayground.it/{}"
                         }
                     ]
                 }
