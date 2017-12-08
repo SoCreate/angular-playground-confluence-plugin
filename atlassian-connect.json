@@ -25,6 +25,8 @@
                     }
                 },
                 "url": "render-angularplayground.html?angularPlaygroundUrl={angular-playground-url}&width={width}&removeSpacingBottom={remove-spacing-bottom}&viewInPlayground={view-in-playground}&outputType={output.type}",
+                "width": "100%",
+                "height": "200px",
                 "description": {
                     "value": "Shows an Angular Playground"
                 },
@@ -80,7 +82,7 @@
                             "value": "By default there is spacing added below the embed. Choosing this option will remove this space."
                         },
                         "type": "boolean",
-                        "required": true,
+                        "required": false,
                         "multiple": false,
                         "defaultValue": "false"
                     },
@@ -93,7 +95,7 @@
                             "value": "Include a button to view the sample in the Playground."
                         },
                         "type": "boolean",
-                        "required": true,
+                        "required": false,
                         "multiple": false,
                         "defaultValue": "true"
                     }
